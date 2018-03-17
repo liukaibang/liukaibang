@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>刘开邦&#39;S BLOG</title>
   
-  <subtitle>前端开发，Web前端技术博客</subtitle>
+  <subtitle>个人博客，前端开发</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liukaibang.com/"/>
@@ -27,10 +27,8 @@
     
     <summary type="html">
     
-      尽量选择不含硅且氨基酸发泡的洗发水。尽量避开以下成分：月桂酸聚醚硫酸酯钠、十二烷基硫酸钠、肉豆蔻酸异丙酯、矿油、聚二甲基硅氧烷。即使是有的话，也选择含量不要太高的。注意这里说的是洗发水，护发素中一般是含有硅的。
-平时生活中注意以下几点：
-1、减少精神压力：还要放松心情，不要让精神太紧绷，生活工作越是紧张忙碌，脱发的机会越高。因此，经常进行深呼吸，散步，做松驰体操等，可消除精神疲劳。此外，每天都应该保证有充足的睡眠，睡前用热水刨脚，这样不仅精力充沛，也利于头发的养护。
-2、保持头发的清洁：对于男性脱发必须要保持毛发的清洁。对于脱发严重我们必须采取一定的措施，首先对于严重的脱发掉发我们能做到的便是
+      &lt;p&gt;尽量选择不含硅且氨基酸发泡的洗发水。尽量避开以下成分：月桂酸聚醚硫酸酯钠、十二烷基硫酸钠、肉豆蔻酸异丙酯、矿油、聚二甲基硅氧烷。即使是有的话，也选择含量不要太高的。注意这里说的是洗发水，护发素中一般是含有硅的。&lt;br&gt;平时生活中注意以下几点：&lt;br&gt;1、减少精神压力：还要放松心情，不要让精神太紧绷，生活工作越是紧张忙碌，脱发的机会越高。因此，经常进行深呼吸，散步，做松驰体操等，可消除精神疲劳。此外，每天都应该保证有充足的睡眠，睡前用热水刨脚，这样不仅精力充沛，也利于头发的养护。&lt;br&gt;2、保持头发的清洁：对于男性脱发必须要保持毛发的清洁。对于脱发严重我们必须采取一定的措施，首先对于严重的脱发掉发我们能做到的便是保持头发的清洁。洗头时最好选用对头皮和头发温和无刺激性的酸性洗发水，可在水中滴几滴醋或放少许盐，温水正好，洗头的间隔最好是2～3天，洗发的同时需边搓边按摩。&lt;br&gt;3、补充营养：脱发的男士进行多补充一些营养，还要在平时多吃含铁、钙、锌等矿物质和维生素以及含蛋白质的食品，比如含有丰富蛋白质的鱼类、大豆、鸡蛋、瘦肉等以及含有丰富微量元素的海藻类、贝类富含维生素B2、B6的菠菜、芦笋、香蕉、猪肝等、都对保护头发、延缓老化有好处，也有利于头发的正常生长&lt;/p&gt;
+
     
     </summary>
     
@@ -48,22 +46,12 @@
     
     <summary type="html">
     
-      今年全国两会政府工作报告指出，“对各类侵害消费者权益的行为，要依法惩处、决不姑息”。就餐遭遇霸王条款，旅游碰上黑导游，网购买到假货，快递出了问题…3•15国际消费者权益日，65个投诉举报电话↓↓购物、旅游、金融、交通…总有你需要的。为自身权益，扩散！
-
-投诉举报
-消费者投诉电话 12315
-质量监督投诉电话 12365
-价格举报电话 12358
-国家旅游服务热线 12301
-邮政行业消费者申诉电话 12305
-文化市场举报热线 12318
-食品药品安全投诉举报热线 12331
-工信部申诉电话 12300
-网络不良与垃圾信息举报 12321
-
-网购服务
-淘宝 0571-8815-8198
-天猫 
+      &lt;p&gt;今年全国两会政府工作报告指出，“对各类侵害消费者权益的行为，要依法惩处、决不姑息”。就餐遭遇霸王条款，旅游碰上黑导游，网购买到假货，快递出了问题…3•15国际消费者权益日，65个投诉举报电话↓↓购物、旅游、金融、交通…总有你需要的。为自身权益，扩散！&lt;/p&gt;
+&lt;h2 id=&quot;投诉举报&quot;&gt;&lt;a href=&quot;#投诉举报&quot; class=&quot;headerlink&quot; title=&quot;投诉举报&quot;&gt;&lt;/a&gt;投诉举报&lt;/h2&gt;&lt;p&gt;消费者投诉电话 12315&lt;br&gt;质量监督投诉电话 12365&lt;br&gt;价格举报电话 12358&lt;br&gt;国家旅游服务热线 12301&lt;br&gt;邮政行业消费者申诉电话 12305&lt;br&gt;文化市场举报热线 12318&lt;br&gt;食品药品安全投诉举报热线 12331&lt;br&gt;工信部申诉电话 12300&lt;br&gt;网络不良与垃圾信息举报 12321&lt;/p&gt;
+&lt;h2 id=&quot;网购服务&quot;&gt;&lt;a href=&quot;#网购服务&quot; class=&quot;headerlink&quot; title=&quot;网购服务&quot;&gt;&lt;/a&gt;网购服务&lt;/h2&gt;&lt;p&gt;淘宝 0571-8815-8198&lt;br&gt;天猫 4008-608-608&lt;br&gt;支付宝 95188&lt;br&gt;京东 400-606-7733&lt;br&gt;一号店 400-007-1111&lt;br&gt;当当网 0527-80878888&lt;br&gt;亚马逊 400-810-5666（国内）&lt;/p&gt;
+&lt;h2 id=&quot;快递服务&quot;&gt;&lt;a href=&quot;#快递服务&quot; class=&quot;headerlink&quot; title=&quot;快递服务&quot;&gt;&lt;/a&gt;快递服务&lt;/h2&gt;&lt;p&gt;EMS快递专递 11183&lt;br&gt;顺丰快递 95338&lt;br&gt;申通快递 95543&lt;br&gt;中通快递 95311&lt;br&gt;韵达快递 95546&lt;br&gt;圆通快递 95554&lt;br&gt;天天快递 400-188-8888&lt;br&gt;百世快递 95320&lt;br&gt;优速快递 400-111-1119&lt;br&gt;全峰快递 400-100-0001&lt;br&gt;宅急送   400-678-9000&lt;br&gt;速尔快递 400-158-9888&lt;/p&gt;
+&lt;h2 id=&quot;通讯服务&quot;&gt;&lt;a href=&quot;#通讯服务&quot; class=&quot;headerlink&quot; title=&quot;通讯服务&quot;&gt;&lt;/a&gt;通讯服务&lt;/h2&gt;&lt;p&gt;中国移动 10086&lt;br&gt;中国联通 10010&lt;br&gt;中国电信 10000&lt;/p&gt;
+&lt;h2 id=&quot;金融服务&quot;&gt;&lt;a href=&quot;#金融服务&quot; class=&quot;headerlink&quot; title=&quot;金融服务&quot;&gt;&lt;/a&gt;金融服务&lt;/h2&gt;
     
     </summary>
     
@@ -95,27 +83,22 @@
     
     <summary type="html">
     
-      系统环境配置
-要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！
-
-安装Node.js
-下载Node.js
-参考地址：安装Node.js
-
-安装Git
-下载地址：http://git-scm.com/download/
-
-安装Hexo
-$ cd d:/hexo
+      &lt;h2 id=&quot;系统环境配置&quot;&gt;&lt;a href=&quot;#系统环境配置&quot; class=&quot;headerlink&quot; title=&quot;系统环境配置&quot;&gt;&lt;/a&gt;系统环境配置&lt;/h2&gt;&lt;p&gt;要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！&lt;/p&gt;
+&lt;h3 id=&quot;安装Node-js&quot;&gt;&lt;a href=&quot;#安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;安装Node.js&quot;&gt;&lt;/a&gt;安装Node.js&lt;/h3&gt;&lt;p&gt;下载Node.js&lt;br&gt;参考地址：&lt;a href=&quot;http://www.nodejs.org&quot; title=&quot;安装Node.js&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装Node.js&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安装Git&quot;&gt;&lt;a href=&quot;#安装Git&quot; class=&quot;headerlink&quot; title=&quot;安装Git&quot;&gt;&lt;/a&gt;安装Git&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a href=&quot;http://git-scm.com/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://git-scm.com/download/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; d:/hexo
 $ npm install hexo-cli -g
 $ hexo init blog
-$ cd blog
+$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; blog
 $ npm install
-$ hexo g # 或者hexo generate
-$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
-
-
-
+$ hexo g &lt;span class=&quot;comment&quot;&gt;# 或者hexo generate&lt;/span&gt;
+$ hexo s &lt;span class=&quot;comment&quot;&gt;# 或者hexo server，可以在http://localhost:4000/ 查看&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里有必要提下Hexo常用的几个命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ hexo generate (hexo g) &lt;span class=&quot;comment&quot;&gt;# 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹&lt;/span&gt;
+$ hexo server (hexo s) &lt;span class=&quot;comment&quot;&gt;# 启动本地web服务，用于博客的预览&lt;/span&gt;
+$ hexo deploy (hexo d) &lt;span class=&quot;comment&quot;&gt;# 部署播客到远端（比如github, heroku等平台）&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -135,7 +118,8 @@ $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
     
     <summary type="html">
     
-      Hi World
+      &lt;p&gt;Hi World &lt;/p&gt;
+
     
     </summary>
     
@@ -153,23 +137,12 @@ $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
     
     <summary type="html">
     
-      Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-Quick Start
-Create a new post
-1
-
-
-$ hexo new &quot;My New Post&quot;
-
-
-More info: Writing
-
-Run server
-1
-
-
-$ hexo s
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
