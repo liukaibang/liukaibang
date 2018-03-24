@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liukaibang.com/"/>
-  <updated>2018-03-17T07:58:03.201Z</updated>
+  <updated>2018-03-24T03:22:40.218Z</updated>
   <id>http://www.liukaibang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python跟我学</title>
+    <link href="http://www.liukaibang.com/2018/03/24/how-to-learn-python/"/>
+    <id>http://www.liukaibang.com/2018/03/24/how-to-learn-python/</id>
+    <published>2018-03-24T03:21:45.000Z</published>
+    <updated>2018-03-24T03:22:40.218Z</updated>
+    
+    <content type="html"><![CDATA[<p>人常说，多就很难精，精就很难多，如果又多又精，肯定会有其他的缺陷，比如java，貌似什么都能做，但是编译起来的龟速让人抓狂，而Python貌似是例外，上得厅堂，下得厨房，几乎是万能的，客户单，网页，人工智能，数学计算，样样精通，还不来学</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;人常说，多就很难精，精就很难多，如果又多又精，肯定会有其他的缺陷，比如java，貌似什么都能做，但是编译起来的龟速让人抓狂，而Python貌似是例外，上得厅堂，下得厨房，几乎是万能的，客户单，网页，人工智能，数学计算，样样精通，还不来学&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Markdown 语法整理大集合2018</title>
