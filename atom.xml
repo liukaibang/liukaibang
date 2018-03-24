@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.liukaibang.com/"/>
-  <updated>2018-03-24T04:21:19.458Z</updated>
+  <updated>2018-03-24T04:30:39.249Z</updated>
   <id>http://www.liukaibang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第2课：Python字符串处理·《Python跟我学》</title>
+    <link href="http://www.liukaibang.com/2018/03/24/lesson-two-how-to-learn-python/"/>
+    <id>http://www.liukaibang.com/2018/03/24/lesson-two-how-to-learn-python/</id>
+    <published>2018-03-24T04:23:15.000Z</published>
+    <updated>2018-03-24T04:30:39.249Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Python里，任何东西都可以看做对象，甚至是一个字符串<br>字符串可以用单引号或者双引号包起来<br>而针对字符串的处理函数可以直接用string.func调用</p><p>下面列出字符串常用处理，大部分项目都可以无忧</p><p>1.去空格及特殊符号<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"www.liukaibang.com"</span></span><br><span class="line">s.strip().lstrip().rstrip(<span class="string">','</span>)</span><br></pre></td></tr></table></figure></p><p>2.连接字符串<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"www.liukaibang.com"</span></span><br><span class="line">ss = <span class="string">"lkb"</span></span><br><span class="line">s += ss</span><br><span class="line"><span class="keyword">print</span> s</span><br></pre></td></tr></table></figure></p><p>3.查找字符<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"www.liukaibang.com"</span></span><br><span class="line">nPos = s.index(<span class="string">"o"</span>)</span><br><span class="line"><span class="keyword">print</span> nPos</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Python里，任何东西都可以看做对象，甚至是一个字符串&lt;br&gt;字符串可以用单引号或者双引号包起来&lt;br&gt;而针对字符串的处理函数可以直接用string.func调用&lt;/p&gt;
+&lt;p&gt;下面列出字符串常用处理，大部分项目都可以无忧&lt;/p&gt;
+&lt;p&gt;1.去空格及特殊符号&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s.strip().lstrip().rstrip(&lt;span class=&quot;string&quot;&gt;&#39;,&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;2.连接字符串&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ss = &lt;span class=&quot;string&quot;&gt;&quot;lkb&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s += ss&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3.查找字符&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nPos = s.index(&lt;span class=&quot;string&quot;&gt;&quot;o&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; nPos&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>第1课：邂逅Python·《Python跟我学》</title>
