@@ -27,46 +27,16 @@
     
     <summary type="html">
     
-      在Python里，任何东西都可以看做对象，甚至是一个字符串
-字符串可以用单引号或者双引号包起来
-而针对字符串的处理函数可以直接用string.func调用
-
-下面列出字符串常用处理，大部分项目都可以无忧
-
-1.去空格及特殊符号
-1
-2
-
-
-s = &quot;www.liukaibang.com&quot;
-s.strip().lstrip().rstrip(&#39;,&#39;)
-
-
-
-
-2.连接字符串
-1
-2
-3
-4
-
-
-s = &quot;www.liukaibang.com&quot;
-ss = &quot;lkb&quot;
-s += ss
-print s
-
-
-
-
-3.查找字符
-1
-2
-3
-
-
-s = &quot;www.liukaibang.com&quot;
-nPos =
+      &lt;p&gt;在Python里，任何东西都可以看做对象，甚至是一个字符串&lt;br&gt;字符串可以用单引号或者双引号包起来&lt;br&gt;而针对字符串的处理函数可以直接用string.func调用&lt;/p&gt;
+&lt;p&gt;下面列出字符串常用处理，大部分项目都可以无忧&lt;/p&gt;
+&lt;p&gt;1.去空格及特殊符号&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s.strip().lstrip().rstrip(&lt;span class=&quot;string&quot;&gt;&#39;,&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;2.连接字符串&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ss = &lt;span class=&quot;string&quot;&gt;&quot;lkb&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s += ss&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3.查找字符&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nPos = s.index(&lt;span class=&quot;string&quot;&gt;&quot;o&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; nPos&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;4.比较字符串&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;www.liukaibang&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s2 = &lt;span class=&quot;string&quot;&gt;&#39;liukaibang&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; cmp(s,s2)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;5.扫描字符串是否包含指定的字符&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s1 = &lt;span class=&quot;string&quot;&gt;&#39;liukaibang.com&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s2 = &lt;span class=&quot;string&quot;&gt;&#39;com&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; len(s1 &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; s2)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;6.字符串长度&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&#39;liukaibang&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; len(s)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;7.字符串大小写转换&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s1 = &lt;span class=&quot;string&quot;&gt;&#39;liukaibang&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s = s1.upper()  大写&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#s = s1.lower() 小写&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;8.翻转字符串&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&#39;liukaibang&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s = s[::&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -78,19 +48,19 @@ nPos =
     <link href="http://www.liukaibang.com/2018/03/24/lesson-one-how-to-learn-python/"/>
     <id>http://www.liukaibang.com/2018/03/24/lesson-one-how-to-learn-python/</id>
     <published>2018-03-24T03:21:45.000Z</published>
-    <updated>2018-03-24T04:21:19.458Z</updated>
+    <updated>2018-03-24T11:09:04.785Z</updated>
     
-    <content type="html"><![CDATA[<p>人常说，多就很难精，精就很难多，如果又多又精，肯定会有其他的缺陷，比如java，貌似什么都能做，但是编译起来的龟速让人抓狂，而Python貌似是例外，上得厅堂，下得厨房，几乎是万能的，客户单，网页，人工智能，数学计算，样样精通，还不来学</p><h2 id="邂逅Python"><a href="#邂逅Python" class="headerlink" title="邂逅Python"></a>邂逅Python</h2><p>Python可以说是一种万能的脚本语言，而且在各个领域都表现优秀，这个是很难得的<br>Python是一门具有强类型(即变量类型是强制要求的)、动态性、隐式类型(不需要做变量声明)、大小写敏感(var和VAR代表了不同的变量)以及面向对象(一切皆为对象)等特点的编程语言</p><p>初学者可能会发现python有两个大版本，<code>2.7</code>和<code>3.0</code>  就目前形势来说，建议学习<code>2.7</code>,因为<code>3.0</code>比较新，而且很多东西不向下兼容，网上资料比较少，开发中遇到问题比较难在网上找到解决方案</p><p>Python比较令人不爽的地方是对格式非常严格，如果tab  空格打错或者代码没对齐，都有可能运行不通过，而在编写方面在说，我觉得他最大的优点是简洁高效，就像汉语一样，用简单的语句可以表示很复杂的意思。</p><p>说起python，不得不说Perl。据说Python的作者就是在用Perl的过程中发现，Perl实在太难用了，今天写的代码，如果逻辑稍微复杂点，若干天后可能自己都看不懂了。于是python诞生了，他是那么的简洁优雅，甚至有点洁癖，可能是Perl造成的阴影。</p><p>下面是个Python的简单例子，打印Hello, World!，其中第二行的<code># -*- coding: UTF-8 -*-挺重要，设置编码，防止乱码，实际的打印语句只有第三行一行</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"Hello, World!"</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>人常说，学多难精，学精难多，如果又多又精，肯定会有其他的缺陷，比如java，貌似什么都能做，但是编译起来的龟速让人抓狂，而Python貌似是例外，上得厅堂，下得厨房，几乎是万能的，客户单，网页，人工智能，数学计算，样样精通，还不来学</p><h2 id="邂逅Python"><a href="#邂逅Python" class="headerlink" title="邂逅Python"></a>邂逅Python</h2><p>Python可以说是一种万能的脚本语言，而且在各个领域都表现优秀，这个是很难得的<br>Python是一门具有强类型(即变量类型是强制要求的)、动态性、隐式类型(不需要做变量声明)、大小写敏感(var和VAR代表了不同的变量)以及面向对象(一切皆为对象)等特点的编程语言</p><p>初学者可能会发现python有两个大版本，<code>2.7</code>和<code>3.0</code>  就目前形势来说，建议学习<code>2.7</code>,因为<code>3.0</code>比较新，而且很多东西不向下兼容，网上资料比较少，开发中遇到问题比较难在网上找到解决方案</p><p>Python比较令人不爽的地方是对格式非常严格，如果tab  空格打错或者代码没对齐，都有可能运行不通过，而在编写方面在说，我觉得他最大的优点是简洁高效，就像汉语一样，用简单的语句可以表示很复杂的意思。</p><p>说起python，不得不说Perl。据说Python的作者就是在用Perl的过程中发现，Perl实在太难用了，今天写的代码，如果逻辑稍微复杂点，若干天后可能自己都看不懂了。于是python诞生了，他是那么的简洁优雅，甚至有点洁癖，可能是Perl造成的阴影。</p><p>下面是个Python的简单例子，打印Hello, World!，其中第二行的<code># -*- coding: UTF-8 -*-挺重要，设置编码，防止乱码，实际的打印语句只有第三行一行</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"Hello, World!"</span></span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
-      人常说，多就很难精，精就很难多，如果又多又精，肯定会有其他的缺陷，比如java，貌似什么都能做，但是编译起来的龟速让人抓狂，而Python貌似是例外，上得厅堂，下得厨房，几乎是万能的，客户单，网页，人工智能，数学计算，样样精通，还不来学
+      &lt;p&gt;人常说，学多难精，学精难多，如果又多又精，肯定会有其他的缺陷，比如java，貌似什么都能做，但是编译起来的龟速让人抓狂，而Python貌似是例外，上得厅堂，下得厨房，几乎是万能的，客户单，网页，人工智能，数学计算，样样精通，还不来学&lt;/p&gt;
+&lt;h2 id=&quot;邂逅Python&quot;&gt;&lt;a href=&quot;#邂逅Python&quot; class=&quot;headerlink&quot; title=&quot;邂逅Python&quot;&gt;&lt;/a&gt;邂逅Python&lt;/h2&gt;&lt;p&gt;Python可以说是一种万能的脚本语言，而且在各个领域都表现优秀，这个是很难得的&lt;br&gt;Python是一门具有强类型(即变量类型是强制要求的)、动态性、隐式类型(不需要做变量声明)、大小写敏感(var和VAR代表了不同的变量)以及面向对象(一切皆为对象)等特点的编程语言&lt;/p&gt;
+&lt;p&gt;初学者可能会发现python有两个大版本，&lt;code&gt;2.7&lt;/code&gt;和&lt;code&gt;3.0&lt;/code&gt;  就目前形势来说，建议学习&lt;code&gt;2.7&lt;/code&gt;,因为&lt;code&gt;3.0&lt;/code&gt;比较新，而且很多东西不向下兼容，网上资料比较少，开发中遇到问题比较难在网上找到解决方案&lt;/p&gt;
+&lt;p&gt;Python比较令人不爽的地方是对格式非常严格，如果tab  空格打错或者代码没对齐，都有可能运行不通过，而在编写方面在说，我觉得他最大的优点是简洁高效，就像汉语一样，用简单的语句可以表示很复杂的意思。&lt;/p&gt;
+&lt;p&gt;说起python，不得不说Perl。据说Python的作者就是在用Perl的过程中发现，Perl实在太难用了，今天写的代码，如果逻辑稍微复杂点，若干天后可能自己都看不懂了。于是python诞生了，他是那么的简洁优雅，甚至有点洁癖，可能是Perl造成的阴影。&lt;/p&gt;
+&lt;p&gt;下面是个Python的简单例子，打印Hello, World!，其中第二行的&lt;code&gt;# -*- coding: UTF-8 -*-挺重要，设置编码，防止乱码，实际的打印语句只有第三行一行&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#!/usr/bin/python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -*- coding: UTF-8 -*-&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 
-邂逅Python
-Python可以说是一种万能的脚本语言，而且在各个领域都表现优秀，这个是很难得的
-Python是一门具有强类型(即变量类型是强制要求的)、动态性、隐式类型(不需要做变量声明)、大小写敏感(var和VAR代表了不同的变量)以及面向对象(一切皆为对象)等特点的编程语言
-
-初学者可能会发现python有两个大版本，2.7和3.0 就目前形势来说，
     
     </summary>
     
@@ -108,21 +78,22 @@ Python是一门具有强类型(即变量类型是强制要求的)、动态性、
     
     <summary type="html">
     
-      简介
-Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。本文能使读者轻松了解简书、GitHub等平台对 Markdown 语法的支持，了解其优点和不足。能够在选择时正确取舍，使用时得心应手。同时，Markdown支持嵌入html标签。注意：Markdown使用#、+、*等符号来标记，符号后面必须跟上 至少1个空格才有效！
-
-1.常用部分
-1.1 标题
- * [h1~h6]1
-   
-   
-   # ~ ######
-   
-   
-   
-
-一般#作为文章大标题，只有一个，### 作为段落标题。
-注：# 后
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。本文能使读者轻松了解简书、GitHub等平台对 Markdown 语法的支持，了解其优点和不足。能够在选择时正确取舍，使用时得心应手。同时，Markdown支持嵌入&lt;code&gt;html&lt;/code&gt;标签。注意：Markdown使用&lt;code&gt;#&lt;/code&gt;、&lt;code&gt;+&lt;/code&gt;、&lt;code&gt;*&lt;/code&gt;等符号来标记，符号后面必须跟上 至少1个空格才有效！&lt;/p&gt;
+&lt;h2 id=&quot;1-常用部分&quot;&gt;&lt;a href=&quot;#1-常用部分&quot; class=&quot;headerlink&quot; title=&quot;1.常用部分&quot;&gt;&lt;/a&gt;1.常用部分&lt;/h2&gt;&lt;h3 id=&quot;1-1-标题&quot;&gt;&lt;a href=&quot;#1-1-标题&quot; class=&quot;headerlink&quot; title=&quot;1.1 标题&quot;&gt;&lt;/a&gt;1.1 标题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;[h1~h6]&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# ~ ######&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般#作为文章大标题，只有一个，### 作为段落标题。&lt;br&gt;注：# 后面保持空格&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上下文标题(分级标题)&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;AAA&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;===&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;BBB&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：&lt;code&gt;=&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; 最少可以只写一个，兼容性一般&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TOC&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[TOC]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：根据标题生成目录，兼容性一般&lt;/p&gt;
     
     </summary>
     
@@ -140,10 +111,9 @@ Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，�
     
     <summary type="html">
     
-      尽量选择不含硅且氨基酸发泡的洗发水。尽量避开以下成分：月桂酸聚醚硫酸酯钠、十二烷基硫酸钠、肉豆蔻酸异丙酯、矿油、聚二甲基硅氧烷。即使是有的话，也选择含量不要太高的。注意这里说的是洗发水，护发素中一般是含有硅的。
-平时生活中注意以下几点：
-1、减少精神压力：还要放松心情，不要让精神太紧绷，生活工作越是紧张忙碌，脱发的机会越高。因此，经常进行深呼吸，散步，做松驰体操等，可消除精神疲劳。此外，每天都应该保证有充足的睡眠，睡前用热水刨脚，这样不仅精力充沛，也利于头发的养护。
-2、保持头发的清洁：对于男性脱发必须要保持毛发的清洁。对于脱发严重我们必须采取一定的措施，首先对于严重的脱发掉发我们能做到的便是
+      &lt;p&gt;尽量选择不含硅且氨基酸发泡的洗发水。尽量避开以下成分：月桂酸聚醚硫酸酯钠、十二烷基硫酸钠、肉豆蔻酸异丙酯、矿油、聚二甲基硅氧烷。即使是有的话，也选择含量不要太高的。注意这里说的是洗发水，护发素中一般是含有硅的。&lt;br&gt;平时生活中注意以下几点：&lt;br&gt;1、减少精神压力：还要放松心情，不要让精神太紧绷，生活工作越是紧张忙碌，脱发的机会越高。因此，经常进行深呼吸，散步，做松驰体操等，可消除精神疲劳。此外，每天都应该保证有充足的睡眠，睡前用热水刨脚，这样不仅精力充沛，也利于头发的养护。&lt;br&gt;2、保持头发的清洁：对于男性脱发必须要保持毛发的清洁。对于脱发严重我们必须采取一定的措施，首先对于严重的脱发掉发我们能做到的便是保持头发的清洁。洗头时最好选用对头皮和头发温和无刺激性的酸性洗发水，可在水中滴几滴醋或放少许盐，温水正好，洗头的间隔最好是2～3天，洗发的同时需边搓边按摩。&lt;br&gt;3、补充营养：脱发的男士进行多补充一些营养，还要在平时多吃含铁、钙、锌等矿物质和维生素以及含蛋白质的食品，比如含有丰富蛋白质的鱼类、大豆、鸡蛋、瘦肉等以及含有丰富微量元素的海藻类、贝类富含维生素B2、B6的菠菜、芦笋、香蕉、猪肝等、都对保护头发、延缓老化有好处，也有利于头发的正常生长&lt;/p&gt;
+&lt;p&gt;参考资料&lt;br&gt;1.&lt;a href=&quot;https://jingyan.baidu.com/article/20b68a8862b62f796cec62ac.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;怎样才能生发养发&lt;/a&gt;&lt;br&gt;2.&lt;a href=&quot;https://www.zhihu.com/question/35470998&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;男生日常怎么护理头发？&lt;/a&gt;&lt;br&gt;3.&lt;a href=&quot;https://www.zhihu.com/question/24887898/answer/108859901&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;女生日常如何养发护发？&lt;/a&gt;&lt;/p&gt;
+
     
     </summary>
     
@@ -161,22 +131,12 @@ Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，�
     
     <summary type="html">
     
-      今年全国两会政府工作报告指出，“对各类侵害消费者权益的行为，要依法惩处、决不姑息”。就餐遭遇霸王条款，旅游碰上黑导游，网购买到假货，快递出了问题…3•15国际消费者权益日，65个投诉举报电话↓↓购物、旅游、金融、交通…总有你需要的。为自身权益，扩散！
-
-投诉举报
-消费者投诉电话 12315
-质量监督投诉电话 12365
-价格举报电话 12358
-国家旅游服务热线 12301
-邮政行业消费者申诉电话 12305
-文化市场举报热线 12318
-食品药品安全投诉举报热线 12331
-工信部申诉电话 12300
-网络不良与垃圾信息举报 12321
-
-网购服务
-淘宝 0571-8815-8198
-天猫 
+      &lt;p&gt;今年全国两会政府工作报告指出，“对各类侵害消费者权益的行为，要依法惩处、决不姑息”。就餐遭遇霸王条款，旅游碰上黑导游，网购买到假货，快递出了问题…3•15国际消费者权益日，65个投诉举报电话↓↓购物、旅游、金融、交通…总有你需要的。为自身权益，扩散！&lt;/p&gt;
+&lt;h2 id=&quot;投诉举报&quot;&gt;&lt;a href=&quot;#投诉举报&quot; class=&quot;headerlink&quot; title=&quot;投诉举报&quot;&gt;&lt;/a&gt;投诉举报&lt;/h2&gt;&lt;p&gt;消费者投诉电话 12315&lt;br&gt;质量监督投诉电话 12365&lt;br&gt;价格举报电话 12358&lt;br&gt;国家旅游服务热线 12301&lt;br&gt;邮政行业消费者申诉电话 12305&lt;br&gt;文化市场举报热线 12318&lt;br&gt;食品药品安全投诉举报热线 12331&lt;br&gt;工信部申诉电话 12300&lt;br&gt;网络不良与垃圾信息举报 12321&lt;/p&gt;
+&lt;h2 id=&quot;网购服务&quot;&gt;&lt;a href=&quot;#网购服务&quot; class=&quot;headerlink&quot; title=&quot;网购服务&quot;&gt;&lt;/a&gt;网购服务&lt;/h2&gt;&lt;p&gt;淘宝 0571-8815-8198&lt;br&gt;天猫 4008-608-608&lt;br&gt;支付宝 95188&lt;br&gt;京东 400-606-7733&lt;br&gt;一号店 400-007-1111&lt;br&gt;当当网 0527-80878888&lt;br&gt;亚马逊 400-810-5666（国内）&lt;/p&gt;
+&lt;h2 id=&quot;快递服务&quot;&gt;&lt;a href=&quot;#快递服务&quot; class=&quot;headerlink&quot; title=&quot;快递服务&quot;&gt;&lt;/a&gt;快递服务&lt;/h2&gt;&lt;p&gt;EMS快递专递 11183&lt;br&gt;顺丰快递 95338&lt;br&gt;申通快递 95543&lt;br&gt;中通快递 95311&lt;br&gt;韵达快递 95546&lt;br&gt;圆通快递 95554&lt;br&gt;天天快递 400-188-8888&lt;br&gt;百世快递 95320&lt;br&gt;优速快递 400-111-1119&lt;br&gt;全峰快递 400-100-0001&lt;br&gt;宅急送   400-678-9000&lt;br&gt;速尔快递 400-158-9888&lt;/p&gt;
+&lt;h2 id=&quot;通讯服务&quot;&gt;&lt;a href=&quot;#通讯服务&quot; class=&quot;headerlink&quot; title=&quot;通讯服务&quot;&gt;&lt;/a&gt;通讯服务&lt;/h2&gt;&lt;p&gt;中国移动 10086&lt;br&gt;中国联通 10010&lt;br&gt;中国电信 10000&lt;/p&gt;
+&lt;h2 id=&quot;金融服务&quot;&gt;&lt;a href=&quot;#金融服务&quot; class=&quot;headerlink&quot; title=&quot;金融服务&quot;&gt;&lt;/a&gt;金融服务&lt;/h2&gt;
     
     </summary>
     
@@ -208,27 +168,22 @@ Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，�
     
     <summary type="html">
     
-      系统环境配置
-要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！
-
-安装Node.js
-下载Node.js
-参考地址：安装Node.js
-
-安装Git
-下载地址：http://git-scm.com/download/
-
-安装Hexo
-$ cd d:/hexo
+      &lt;h2 id=&quot;系统环境配置&quot;&gt;&lt;a href=&quot;#系统环境配置&quot; class=&quot;headerlink&quot; title=&quot;系统环境配置&quot;&gt;&lt;/a&gt;系统环境配置&lt;/h2&gt;&lt;p&gt;要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！&lt;/p&gt;
+&lt;h3 id=&quot;安装Node-js&quot;&gt;&lt;a href=&quot;#安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;安装Node.js&quot;&gt;&lt;/a&gt;安装Node.js&lt;/h3&gt;&lt;p&gt;下载Node.js&lt;br&gt;参考地址：&lt;a href=&quot;http://www.nodejs.org&quot; title=&quot;安装Node.js&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装Node.js&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安装Git&quot;&gt;&lt;a href=&quot;#安装Git&quot; class=&quot;headerlink&quot; title=&quot;安装Git&quot;&gt;&lt;/a&gt;安装Git&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a href=&quot;http://git-scm.com/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://git-scm.com/download/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; d:/hexo
 $ npm install hexo-cli -g
 $ hexo init blog
-$ cd blog
+$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; blog
 $ npm install
-$ hexo g # 或者hexo generate
-$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
-
-
-
+$ hexo g &lt;span class=&quot;comment&quot;&gt;# 或者hexo generate&lt;/span&gt;
+$ hexo s &lt;span class=&quot;comment&quot;&gt;# 或者hexo server，可以在http://localhost:4000/ 查看&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里有必要提下Hexo常用的几个命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ hexo generate (hexo g) &lt;span class=&quot;comment&quot;&gt;# 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹&lt;/span&gt;
+$ hexo server (hexo s) &lt;span class=&quot;comment&quot;&gt;# 启动本地web服务，用于博客的预览&lt;/span&gt;
+$ hexo deploy (hexo d) &lt;span class=&quot;comment&quot;&gt;# 部署播客到远端（比如github, heroku等平台）&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -248,7 +203,8 @@ $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
     
     <summary type="html">
     
-      Hi World
+      &lt;p&gt;Hi World &lt;/p&gt;
+
     
     </summary>
     
@@ -266,23 +222,12 @@ $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
     
     <summary type="html">
     
-      Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-Quick Start
-Create a new post
-1
-
-
-$ hexo new &quot;My New Post&quot;
-
-
-More info: Writing
-
-Run server
-1
-
-
-$ hexo s
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
