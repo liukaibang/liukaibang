@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.liukaibang.com">
-  <title>Archives | 刘开邦&#39;S BLOG</title>
+  <title>第5课：Python操作Mysql·《Python跟我学》 | 刘开邦&#39;S BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="刘开邦&apos;S BLOG，前端开发，Web前端技术博客！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘开邦&#39;S BLOG">
-<meta property="og:url" content="http://www.liukaibang.com/archives/page/2/index.html">
+  <meta name="description" content="开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作 假设我们有个godeye表  字段  id  name  status第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可 MySQLdb模块安装：pip list显示出来的名字叫MySQL-python，源码下载地址：https://pypi.python.org/pypi/My">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第5课：Python操作Mysql·《Python跟我学》">
+<meta property="og:url" content="http://www.liukaibang.com/2018/03/24/lesson-five-how-to-learn-python/index.html">
 <meta property="og:site_name" content="刘开邦&#39;S BLOG">
-<meta property="og:description" content="刘开邦&apos;S BLOG，前端开发，Web前端技术博客！">
+<meta property="og:description" content="开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作 假设我们有个godeye表  字段  id  name  status第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可 MySQLdb模块安装：pip list显示出来的名字叫MySQL-python，源码下载地址：https://pypi.python.org/pypi/My">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-24T13:12:40.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘开邦&#39;S BLOG">
-<meta name="twitter:description" content="刘开邦&apos;S BLOG，前端开发，Web前端技术博客！">
+<meta name="twitter:title" content="第5课：Python操作Mysql·《Python跟我学》">
+<meta name="twitter:description" content="开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作 假设我们有个godeye表  字段  id  name  status第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可 MySQLdb模块安装：pip list显示出来的名字叫MySQL-python，源码下载地址：https://pypi.python.org/pypi/My">
   
     <link rel="alternative" href="/atom.xml" title="刘开邦&#39;S BLOG" type="application/atom+xml">
   
@@ -157,79 +158,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-lesson-five-how-to-learn-python" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/30/Hello-GitHub/" class="archive-article-date">
-  	<time datetime="2018-01-30T14:35:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/30/Hello-GitHub/">Hello GitHub</a>
+    <h1 class="article-title" itemprop="name">
+      第5课：Python操作Mysql·《Python跟我学》
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/30/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-30T13:58:51.194Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
+        
+        <a href="/2018/03/24/lesson-five-how-to-learn-python/" class="archive-article-date">
+  	<time datetime="2018-03-24T13:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/30/hello-world/">Hello World</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作</p>
+<p>假设我们有个godeye表  字段  id  name  status<br>第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可</p>
+<p>MySQLdb模块安装：<br>pip list显示出来的名字叫MySQL-python，源码下载地址：<a href="https://pypi.python.org/pypi/MySQL-python/1.2.5" target="_blank" rel="noopener">https://pypi.python.org/pypi/MySQL-python/1.2.5</a><br>安装一般会出现找不到mysql_config的错误<br>首先你需要本机上已经安装有mysql，找到对应mysql_config的路径，然后在mysql-python源码包下找到：setup_posix.py 文件，<br>找到文件中的 mysql_config.path 将其值修改mysql_config.path = “/Applications/MAMP/Library/bin/mysql_config” 这里的路径是我本地对应文件的路径<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查询数据</span></span><br><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn=MySQLdb.connect(host=<span class="string">'localhost'</span>,user=<span class="string">'root'</span>,passwd=<span class="string">''</span>,db=<span class="string">'test'</span>,port=<span class="number">3306</span>)</span><br><span class="line">    cur=conn.cursor()</span><br><span class="line">    cur.execute(<span class="string">'select * from godeye'</span>)</span><br><span class="line">    rows = cur.fetchall()<span class="comment">#查询一条数据用cur.fetchone() 返回值是个元祖</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> rows:</span><br><span class="line">        <span class="keyword">print</span> row</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br><span class="line"><span class="keyword">except</span> MySQLdb.Error,e:</span><br><span class="line">     <span class="keyword">print</span> <span class="string">"Mysql Error %d: %s"</span> % (e.args[<span class="number">0</span>], e.args[<span class="number">1</span>])</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line"><span class="comment">#写数据</span></span><br><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment">#reload(sys)</span></span><br><span class="line"><span class="comment">#sys.setdefaultencoding('utf-8')</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn = MySQLdb.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, passwd=<span class="string">''</span>, db=<span class="string">'test'</span>, port=<span class="number">3306</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line">    cur  = conn.cursor()</span><br><span class="line">     </span><br><span class="line">    time = time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime() )</span><br><span class="line">    <span class="comment">#sys.exit()</span></span><br><span class="line">    value = [<span class="string">'godeye'</span>, <span class="number">0</span>, time]</span><br><span class="line">    </span><br><span class="line">    cur.execute(<span class="string">'insert into godeye (name, status, time) values (%s,%s,%s)'</span>, value)</span><br><span class="line">    </span><br><span class="line">    cur.execute(<span class="string">'update godeye set name="I am godeye" where id = 1'</span>)</span><br><span class="line"> </span><br><span class="line">    conn.commit()</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">except</span> MySQLdb.Error, e:</span><br><span class="line">     <span class="keyword">print</span> <span class="string">"Mysql Error %d: %s"</span> % (e.args[<span class="number">0</span>], e.args[<span class="number">1</span>])</span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃冰淇淋<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.liukaibang.com/2018/03/24/lesson-five-how-to-learn-python/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/03/24/lesson-four-how-to-learn-python/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第4课：Python类操作·《Python跟我学》</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -253,8 +342,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

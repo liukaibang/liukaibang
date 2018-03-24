@@ -159,6 +159,74 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-lesson-five-how-to-learn-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/24/lesson-five-how-to-learn-python/">第5课：Python操作Mysql·《Python跟我学》</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/24/lesson-five-how-to-learn-python/" class="archive-article-date">
+  	<time datetime="2018-03-24T13:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作</p>
+<p>假设我们有个godeye表  字段  id  name  status<br>第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可</p>
+<p>MySQLdb模块安装：<br>pip list显示出来的名字叫MySQL-python，源码下载地址：<a href="https://pypi.python.org/pypi/MySQL-python/1.2.5" target="_blank" rel="noopener">https://pypi.python.org/pypi/MySQL-python/1.2.5</a><br>安装一般会出现找不到mysql_config的错误<br>首先你需要本机上已经安装有mysql，找到对应mysql_config的路径，然后在mysql-python源码包下找到：setup_posix.py 文件，<br>找到文件中的 mysql_config.path 将其值修改mysql_config.path = “/Applications/MAMP/Library/bin/mysql_config” 这里的路径是我本地对应文件的路径<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查询数据</span></span><br><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn=MySQLdb.connect(host=<span class="string">'localhost'</span>,user=<span class="string">'root'</span>,passwd=<span class="string">''</span>,db=<span class="string">'test'</span>,port=<span class="number">3306</span>)</span><br><span class="line">    cur=conn.cursor()</span><br><span class="line">    cur.execute(<span class="string">'select * from godeye'</span>)</span><br><span class="line">    rows = cur.fetchall()<span class="comment">#查询一条数据用cur.fetchone() 返回值是个元祖</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> rows:</span><br><span class="line">        <span class="keyword">print</span> row</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br><span class="line"><span class="keyword">except</span> MySQLdb.Error,e:</span><br><span class="line">     <span class="keyword">print</span> <span class="string">"Mysql Error %d: %s"</span> % (e.args[<span class="number">0</span>], e.args[<span class="number">1</span>])</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line"><span class="comment">#写数据</span></span><br><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment">#reload(sys)</span></span><br><span class="line"><span class="comment">#sys.setdefaultencoding('utf-8')</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn = MySQLdb.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, passwd=<span class="string">''</span>, db=<span class="string">'test'</span>, port=<span class="number">3306</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line">    cur  = conn.cursor()</span><br><span class="line">     </span><br><span class="line">    time = time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime() )</span><br><span class="line">    <span class="comment">#sys.exit()</span></span><br><span class="line">    value = [<span class="string">'godeye'</span>, <span class="number">0</span>, time]</span><br><span class="line">    </span><br><span class="line">    cur.execute(<span class="string">'insert into godeye (name, status, time) values (%s,%s,%s)'</span>, value)</span><br><span class="line">    </span><br><span class="line">    cur.execute(<span class="string">'update godeye set name="I am godeye" where id = 1'</span>)</span><br><span class="line"> </span><br><span class="line">    conn.commit()</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">except</span> MySQLdb.Error, e:</span><br><span class="line">     <span class="keyword">print</span> <span class="string">"Mysql Error %d: %s"</span> % (e.args[<span class="number">0</span>], e.args[<span class="number">1</span>])</span><br></pre></td></tr></table></figure></p>
+
+        
+          <a class="article-more-a" href="/2018/03/24/lesson-five-how-to-learn-python/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/24/lesson-five-how-to-learn-python/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-lesson-four-how-to-learn-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -792,72 +860,6 @@ $ hexo deploy (hexo d) <span class="comment"># 部署播客到远端（比如git
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/31/how-to-use-Hexo-and-GitHub-to-build-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hello-GitHub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/30/Hello-GitHub/">Hello GitHub</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/30/Hello-GitHub/" class="archive-article-date">
-  	<time datetime="2018-01-30T14:35:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hi World </p>
-
-        
-          <a class="article-more-a" href="/2018/01/30/Hello-GitHub/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/30/Hello-GitHub/">展开全文 >></a>
         </p>
       
 
