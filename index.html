@@ -159,6 +159,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-The-realization-method-of-virtual-host-through-domain-name-jump-directory" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/">虚拟主机通过域名跳转目录的实现方法</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/" class="archive-article-date">
+  	<time datetime="2018-03-28T11:10:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>案例一：asp语言，asp语言对应的是windows主机，目前实测可以支持的方案代码如下</p>
+<p>1、这里用到了ASP中的<code>case</code>选择语句，根据servervariables(“HTTP_HOST”)获取的主机HTTP头，也就是域名，来判断需要跳转到哪些目录中，特别适合于二级域名的网站使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">host=lcase(request.servervariables(&quot;HTTP_HOST&quot;))  ‘取得HTTP输入的值并付值到HTOST中</span><br><span class="line">select CASE host  ‘设置跳转条件’</span><br><span class="line">CASE &quot;a.ethnicity.cn&quot; ‘如果HOST的值是 a.ethnicity.c 就选择case&quot;a.ethnicity.c&quot;的命令访问/a目录下站点’</span><br><span class="line">response.redirect &quot;/a/&quot;</span><br><span class="line">CASE &quot;b.ethnicity.cn&quot;</span><br><span class="line">response.redirect &quot;/b/&quot;</span><br><span class="line">case &quot;c.ethnicity.cn&quot;  </span><br><span class="line">Server.Transfer(&quot;b/default.asp&quot;)  ‘如果不在上述特定范围’</span><br><span class="line"></span><br><span class="line">CASE ELSE</span><br><span class="line">response.redirect &quot;/else/&quot;   ‘转到else目录’</span><br><span class="line">END select</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure></p>
+<p>案例二：php语言，php语言可以对应的是轻云服务器linux的php或者普通的虚拟主机的linux系统</p>
+<p>1、PHP 跳转代码实现一个网站空间绑定多个域名，建立多个网站<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> ($_SERVER[<span class="string">"HTTP_HOST"</span>])</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">"a.ethnicity.cn"</span>:</span><br><span class="line">header(<span class="string">"location:a/"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">"b.ethnicity.cn"</span>:</span><br><span class="line">header(<span class="string">"location:b/"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">"c.ethnicity.cn"</span>:</span><br><span class="line">header(<span class="string">"location:c/"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>2、key-value的模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$domain_route = array(</span><br><span class="line">        ‘a.ethnicity.cn’ =&gt; ‘a/‘,</span><br><span class="line">        ‘b.ethnicity.cn’ =&gt; ‘b/‘,</span><br><span class="line">        ‘c.ethnicity.cn’ =&gt; ‘c/‘,</span><br><span class="line">        ‘d.ethnicity.cn’ =&gt; ‘main.php’,</span><br><span class="line">);</span><br><span class="line">$domain = $_SERVER[‘HTTP_HOST’];</span><br><span class="line">$target_url = $domain_route[$domain];</span><br><span class="line">header(&quot;location:&#123;$target_url&#125;&quot;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>友情提醒：虚拟主机因为每个站点性能资源有限，要获得更好的访问效果强烈建议一个主机只放置一个站点 </p>
+
+        
+          <a class="article-more-a" href="/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-lesson-five-how-to-learn-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -769,97 +840,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/03/14/Sublime-Text-3-whole-course-detailed-graphic-original-tutorial/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-how-to-use-Hexo-and-GitHub-to-build-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/31/how-to-use-Hexo-and-GitHub-to-build-blog/">手把手教你使用Hexo和Github Pages搭建个人独立博客</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/31/how-to-use-Hexo-and-GitHub-to-build-blog/" class="archive-article-date">
-  	<time datetime="2018-01-31T07:58:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="系统环境配置"><a href="#系统环境配置" class="headerlink" title="系统环境配置"></a>系统环境配置</h2><p>要使用Hexo，需要在你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！</p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>下载Node.js<br>参考地址：<a href="http://www.nodejs.org" title="安装Node.js" target="_blank" rel="noopener">安装Node.js</a></p>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载地址：<a href="http://git-scm.com/download/" target="_blank" rel="noopener">http://git-scm.com/download/</a></p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><pre><code class="bash">$ <span class="built_in">cd</span> d:/hexo
-$ npm install hexo-cli -g
-$ hexo init blog
-$ <span class="built_in">cd</span> blog
-$ npm install
-$ hexo g <span class="comment"># 或者hexo generate</span>
-$ hexo s <span class="comment"># 或者hexo server，可以在http://localhost:4000/ 查看</span>
-</code></pre>
-<p>这里有必要提下Hexo常用的几个命令：</p>
-<pre><code class="bash">$ hexo generate (hexo g) <span class="comment"># 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹</span>
-$ hexo server (hexo s) <span class="comment"># 启动本地web服务，用于博客的预览</span>
-$ hexo deploy (hexo d) <span class="comment"># 部署播客到远端（比如github, heroku等平台）</span>
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/01/31/how-to-use-Hexo-and-GitHub-to-build-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/31/how-to-use-Hexo-and-GitHub-to-build-blog/">展开全文 >></a>
         </p>
       
 

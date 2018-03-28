@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.liukaibang.com">
-  <title>第5课：Python操作Mysql·《Python跟我学》 | 刘开邦&#39;S BLOG</title>
+  <title>虚拟主机通过域名跳转目录的实现方法 | 刘开邦&#39;S BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作 假设我们有个godeye表  字段  id  name  status第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可 MySQLdb模块安装：pip list显示出来的名字叫MySQL-python，源码下载地址：https://pypi.python.org/pypi/My">
+  <meta name="description" content="案例一：asp语言，asp语言对应的是windows主机，目前实测可以支持的方案代码如下 1、这里用到了ASP中的case选择语句，根据servervariables(“HTTP_HOST”)获取的主机HTTP头，也就是域名，来判断需要跳转到哪些目录中，特别适合于二级域名的网站使用1234567891011121314&amp;lt;%host=lcase(request.servervariables(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第5课：Python操作Mysql·《Python跟我学》">
-<meta property="og:url" content="http://www.liukaibang.com/2018/03/24/lesson-five-how-to-learn-python/index.html">
+<meta property="og:title" content="虚拟主机通过域名跳转目录的实现方法">
+<meta property="og:url" content="http://www.liukaibang.com/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/index.html">
 <meta property="og:site_name" content="刘开邦&#39;S BLOG">
-<meta property="og:description" content="开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作 假设我们有个godeye表  字段  id  name  status第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可 MySQLdb模块安装：pip list显示出来的名字叫MySQL-python，源码下载地址：https://pypi.python.org/pypi/My">
+<meta property="og:description" content="案例一：asp语言，asp语言对应的是windows主机，目前实测可以支持的方案代码如下 1、这里用到了ASP中的case选择语句，根据servervariables(“HTTP_HOST”)获取的主机HTTP头，也就是域名，来判断需要跳转到哪些目录中，特别适合于二级域名的网站使用1234567891011121314&amp;lt;%host=lcase(request.servervariables(">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-24T13:12:40.763Z">
+<meta property="og:updated_time" content="2018-03-28T11:13:37.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第5课：Python操作Mysql·《Python跟我学》">
-<meta name="twitter:description" content="开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作 假设我们有个godeye表  字段  id  name  status第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可 MySQLdb模块安装：pip list显示出来的名字叫MySQL-python，源码下载地址：https://pypi.python.org/pypi/My">
+<meta name="twitter:title" content="虚拟主机通过域名跳转目录的实现方法">
+<meta name="twitter:description" content="案例一：asp语言，asp语言对应的是windows主机，目前实测可以支持的方案代码如下 1、这里用到了ASP中的case选择语句，根据servervariables(“HTTP_HOST”)获取的主机HTTP头，也就是域名，来判断需要跳转到哪些目录中，特别适合于二级域名的网站使用1234567891011121314&amp;lt;%host=lcase(request.servervariables(">
   
     <link rel="alternative" href="/atom.xml" title="刘开邦&#39;S BLOG" type="application/atom+xml">
   
@@ -158,29 +158,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-lesson-five-how-to-learn-python" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-The-realization-method-of-virtual-host-through-domain-name-jump-directory" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第5课：Python操作Mysql·《Python跟我学》
+      虚拟主机通过域名跳转目录的实现方法
     </h1>
   
 
         
-        <a href="/2018/03/24/lesson-five-how-to-learn-python/" class="archive-article-date">
-  	<time datetime="2018-03-24T13:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
+        <a href="/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/" class="archive-article-date">
+  	<time datetime="2018-03-28T11:10:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>开发项目，免不了和数据库打交道，这里以mysql为例，来说明python怎么进行增删改查操作</p>
-<p>假设我们有个godeye表  字段  id  name  status<br>第一步我们需要python操作mysql用到的MySQLdb包，下载安装即可</p>
-<p>MySQLdb模块安装：<br>pip list显示出来的名字叫MySQL-python，源码下载地址：<a href="https://pypi.python.org/pypi/MySQL-python/1.2.5" target="_blank" rel="noopener">https://pypi.python.org/pypi/MySQL-python/1.2.5</a><br>安装一般会出现找不到mysql_config的错误<br>首先你需要本机上已经安装有mysql，找到对应mysql_config的路径，然后在mysql-python源码包下找到：setup_posix.py 文件，<br>找到文件中的 mysql_config.path 将其值修改mysql_config.path = “/Applications/MAMP/Library/bin/mysql_config” 这里的路径是我本地对应文件的路径<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查询数据</span></span><br><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn=MySQLdb.connect(host=<span class="string">'localhost'</span>,user=<span class="string">'root'</span>,passwd=<span class="string">''</span>,db=<span class="string">'test'</span>,port=<span class="number">3306</span>)</span><br><span class="line">    cur=conn.cursor()</span><br><span class="line">    cur.execute(<span class="string">'select * from godeye'</span>)</span><br><span class="line">    rows = cur.fetchall()<span class="comment">#查询一条数据用cur.fetchone() 返回值是个元祖</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> rows:</span><br><span class="line">        <span class="keyword">print</span> row</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br><span class="line"><span class="keyword">except</span> MySQLdb.Error,e:</span><br><span class="line">     <span class="keyword">print</span> <span class="string">"Mysql Error %d: %s"</span> % (e.args[<span class="number">0</span>], e.args[<span class="number">1</span>])</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line"><span class="comment">#写数据</span></span><br><span class="line"><span class="keyword">import</span> MySQLdb</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment">#reload(sys)</span></span><br><span class="line"><span class="comment">#sys.setdefaultencoding('utf-8')</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn = MySQLdb.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, passwd=<span class="string">''</span>, db=<span class="string">'test'</span>, port=<span class="number">3306</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line">    cur  = conn.cursor()</span><br><span class="line">     </span><br><span class="line">    time = time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime() )</span><br><span class="line">    <span class="comment">#sys.exit()</span></span><br><span class="line">    value = [<span class="string">'godeye'</span>, <span class="number">0</span>, time]</span><br><span class="line">    </span><br><span class="line">    cur.execute(<span class="string">'insert into godeye (name, status, time) values (%s,%s,%s)'</span>, value)</span><br><span class="line">    </span><br><span class="line">    cur.execute(<span class="string">'update godeye set name="I am godeye" where id = 1'</span>)</span><br><span class="line"> </span><br><span class="line">    conn.commit()</span><br><span class="line">    cur.close()</span><br><span class="line">    conn.close()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">except</span> MySQLdb.Error, e:</span><br><span class="line">     <span class="keyword">print</span> <span class="string">"Mysql Error %d: %s"</span> % (e.args[<span class="number">0</span>], e.args[<span class="number">1</span>])</span><br></pre></td></tr></table></figure></p>
+        <p>案例一：asp语言，asp语言对应的是windows主机，目前实测可以支持的方案代码如下</p>
+<p>1、这里用到了ASP中的<code>case</code>选择语句，根据servervariables(“HTTP_HOST”)获取的主机HTTP头，也就是域名，来判断需要跳转到哪些目录中，特别适合于二级域名的网站使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">host=lcase(request.servervariables(&quot;HTTP_HOST&quot;))  ‘取得HTTP输入的值并付值到HTOST中</span><br><span class="line">select CASE host  ‘设置跳转条件’</span><br><span class="line">CASE &quot;a.ethnicity.cn&quot; ‘如果HOST的值是 a.ethnicity.c 就选择case&quot;a.ethnicity.c&quot;的命令访问/a目录下站点’</span><br><span class="line">response.redirect &quot;/a/&quot;</span><br><span class="line">CASE &quot;b.ethnicity.cn&quot;</span><br><span class="line">response.redirect &quot;/b/&quot;</span><br><span class="line">case &quot;c.ethnicity.cn&quot;  </span><br><span class="line">Server.Transfer(&quot;b/default.asp&quot;)  ‘如果不在上述特定范围’</span><br><span class="line"></span><br><span class="line">CASE ELSE</span><br><span class="line">response.redirect &quot;/else/&quot;   ‘转到else目录’</span><br><span class="line">END select</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure></p>
+<p>案例二：php语言，php语言可以对应的是轻云服务器linux的php或者普通的虚拟主机的linux系统</p>
+<p>1、PHP 跳转代码实现一个网站空间绑定多个域名，建立多个网站<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> ($_SERVER[<span class="string">"HTTP_HOST"</span>])</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">"a.ethnicity.cn"</span>:</span><br><span class="line">header(<span class="string">"location:a/"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">"b.ethnicity.cn"</span>:</span><br><span class="line">header(<span class="string">"location:b/"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">"c.ethnicity.cn"</span>:</span><br><span class="line">header(<span class="string">"location:c/"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>2、key-value的模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$domain_route = array(</span><br><span class="line">        ‘a.ethnicity.cn’ =&gt; ‘a/‘,</span><br><span class="line">        ‘b.ethnicity.cn’ =&gt; ‘b/‘,</span><br><span class="line">        ‘c.ethnicity.cn’ =&gt; ‘c/‘,</span><br><span class="line">        ‘d.ethnicity.cn’ =&gt; ‘main.php’,</span><br><span class="line">);</span><br><span class="line">$domain = $_SERVER[‘HTTP_HOST’];</span><br><span class="line">$target_url = $domain_route[$domain];</span><br><span class="line">header(&quot;location:&#123;$target_url&#125;&quot;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>友情提醒：虚拟主机因为每个站点性能资源有限，要获得更好的访问效果强烈建议一个主机只放置一个站点 </p>
 
       
 
@@ -270,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.liukaibang.com/2018/03/24/lesson-five-how-to-learn-python/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.liukaibang.com/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/28/The-realization-method-of-virtual-host-through-domain-name-jump-directory/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          虚拟主机通过域名跳转目录的实现方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/24/lesson-four-how-to-learn-python/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第4课：Python类操作·《Python跟我学》</div>
+    <a href="/2018/03/24/lesson-five-how-to-learn-python/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第5课：Python操作Mysql·《Python跟我学》</div>
       <i class="icon-circle-right"></i>
     </a>
   
