@@ -159,6 +159,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Flask-quick-start" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/28/Flask-quick-start/">第6课：Flask快速入门·《Python跟我学》</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/28/Flask-quick-start/" class="archive-article-date">
+  	<time datetime="2018-03-28T12:42:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Flask是一个Python编写的Web微框架，让我们可以使用Python语言快速实现一个网站或Web服务。本文参考自Flask官方文档，大部分代码引用自官方文档。</p>
+<h2 id="安装Flask"><a href="#安装Flask" class="headerlink" title="安装Flask"></a>安装Flask</h2><p>首先我们来安装Flask。最简单的办法就是使用pip。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install flask</span><br></pre></td></tr></table></figure></p>
+<p>然后打开一个Python文件，输入下面的内容并运行该文件。然后访问localhost:5000，我们应当可以看到浏览器上输出了Hello Flask!。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello Flask!'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><p>我们修改代码中的输出，然后查看浏览器上是否有变化。如果你照做的话，可以看到什么变化都没有。其实Flask内置了调试模式，可以自动重载代码并显示调试信息。这需要我们开启调试模式，方法很简单，设置FLASK_DEBUG环境变量，并将值设置为1。</p>
+<p>然后再次运行程序，会看到有这样的输出。这时候如果再次修改代码，会发现这次Flask会自动重启。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* Restarting <span class="keyword">with</span> stat</span><br><span class="line">* Debugger <span class="keyword">is</span> active!</span><br><span class="line">* Debugger PIN: <span class="number">157</span><span class="number">-063</span><span class="number">-180</span></span><br><span class="line">* Running on http://<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5000</span>/ (Press CTRL+C to quit)</span><br></pre></td></tr></table></figure></p>
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p> 在上面的例子里可以看到路由的使用。如果了解Spring Web MVC的话，应该对路由很熟悉。路由通过使用Flask的app.route装饰器来设置，这类似Java的注解。<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> @app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Index Page'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/hello')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello, World'</span></span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/03/28/Flask-quick-start/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/28/Flask-quick-start/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-The-realization-method-of-virtual-host-through-domain-name-jump-directory" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -778,68 +848,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/03/15/the-65-practical-complaint-calls-for-customer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Sublime-Text-3-whole-course-detailed-graphic-original-tutorial" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/14/Sublime-Text-3-whole-course-detailed-graphic-original-tutorial/">Sublime Text 3 whole course detailed graphic original tutorial</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/14/Sublime-Text-3-whole-course-detailed-graphic-original-tutorial/" class="archive-article-date">
-  	<time datetime="2018-03-14T12:49:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/14/Sublime-Text-3-whole-course-detailed-graphic-original-tutorial/">展开全文 >></a>
         </p>
       
 
